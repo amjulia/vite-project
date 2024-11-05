@@ -1,0 +1,150 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1f2229;
+  padding-left: 162px;
+  padding-right: 162px;
+}
+
+.logo {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.geo {
+  display: flex;
+}
+.geoMobile {
+  display: none;
+}
+.text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #7c8792;
+}
+
+.bellMiddle {
+  width: 18px;
+  height: 30px;
+  margin-top: -1px;
+  border-radius: 12.5px 12.5px 0 0;
+  animation: bell 1s 1s both infinite;
+}
+.bell {
+  position: relative;
+}
+.bellCount {
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  right: 0px;
+  width: 6px;
+  height: 6px;
+  line-height: 30px;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: #3fcbff;
+  color: #fff;
+  border: 2px solid #1f2229;
+}
+.mobile {
+  display: none;
+}
+
+.menuItems {
+  padding-left: 162px;
+  padding-right: 162px;
+  background: #ffffff;
+}
+.menuList {
+  padding-left: 0;
+  padding-top: 13px;
+
+  display: flex;
+  gap: 18px;
+  justify-content: start;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #7c8792;
+}
+.menuList li {
+  padding-bottom: 14px;
+  border-bottom: 2px solid transparent;
+}
+.menuList li:hover {
+  border-bottom: 2px solid #1f2229;
+  color: #1f2229;
+}
+
+@keyframes bell {
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(30deg);
+  }
+  20% {
+    transform: rotate(0);
+  }
+  80% {
+    transform: rotate(0);
+  }
+  90% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 13px 18px;
+  }
+  .geo {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .bellMobile {
+    display: flex;
+    gap: 18px;
+  }
+
+  .menuItems {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .menuList {
+    flex-direction: column;
+  }
+  .menuItems {
+    padding: 13px 18px;
+    padding-bottom: 260px;
+  }
+  .menuList {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+  .menuList li {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ededed;
+  }
+  .geoMobile {
+    padding: 13px 18px;
+    display: flex;
+    gap: 4px;
+  }
+  .text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  .menuDesctop {
+    display: none;
+  }
+}
